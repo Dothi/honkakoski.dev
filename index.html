@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jyri — IT Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --crust: #11111b;
+      --mantle: #181825;
+      --base: #1e1e2e;
+      --surface0: #313244;
+      --overlay0: #6c7086;
+      --subtext0: #a6adc8;
+      --text: #cdd6f4;
+      --mauve: #cba6f7;
+    }
+
+    body {
+      background: var(--crust);
+      color: var(--text);
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      text-align: center;
+      padding: 2rem;
+      max-width: 520px;
+    }
+
+    .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+      color: #fff;
+    }
+
+    .title {
+      font-size: 1rem;
+      color: var(--overlay0);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .divider {
+      width: 32px;
+      height: 2px;
+      background: var(--surface0);
+      margin: 0 auto 2.5rem;
+      border: none;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--subtext0);
+      margin-bottom: 2.5rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--subtext0);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      color: var(--mauve);
+      border-bottom-color: var(--mauve);
+    }
+
+    .links a:focus-visible {
+      outline: 2px solid var(--mauve);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .cat {
+      margin-top: 4rem;
+      opacity: 0.12;
+    }
+
+    .cat svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="name">Jyri Lastname</h1>
+    <p class="title">IT Engineer</p>
+    <hr class="divider">
+    <p class="bio">
+      Networking, infrastructure, and systems administration.
+      Building reliable things and solving problems close to the metal.
+    </p>
+    <ul class="links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener">github</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin</a></li>
+      <li><a href="mailto:you@yourdomain.dev">email</a></li>
+    </ul>
+    <div class="cat" aria-hidden="true">
+      <svg viewBox="0 0 32 24" fill="currentColor">
+        <path d="M4 24 L4 8 L8 2 L12 8 L20 8 L24 2 L28 8 L28 24 Z"/>
+      </svg>
+    </div>
+  </main>
+</body>
+</html>
