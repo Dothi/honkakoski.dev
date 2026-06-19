@@ -17,11 +17,8 @@
   --text: #cdd6f4;
   --mauve: #cba6f7;
   --green: #a6e3a1;
-  --peach: #fab387;
-  --blue: #89b4fa;
   --pink: #f5c2e7;
-  --teal: #94e2d5;
-  --mauve-dim: rgba(203, 166, 247, 0.08);
+  --mauve-dim: rgba(203, 166, 247, 0.15);
 }
 
 ::selection {
@@ -38,7 +35,7 @@ body {
   background: var(--crust);
   color: var(--text);
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
 }
@@ -74,7 +71,6 @@ a:focus-visible {
 }
 
 .name {
-  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -129,7 +125,6 @@ section {
 }
 
 .section-heading {
-  font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -162,25 +157,46 @@ section {
 
 /* ---- experience ---- */
 
-.exp-list {
+.exp-org {
+  border-left: 2px solid var(--surface0);
+  padding-left: 1.25rem;
+}
+
+.exp-org-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.exp-org-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--mauve);
+}
+
+.exp-roles {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-left: 1rem;
 }
 
-.exp-card {
-  padding: 1.25rem;
-  border-radius: 6px;
+.exp-role {
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
   border-left: 2px solid var(--surface0);
   transition: border-color 0.25s, background 0.25s;
 }
 
-.exp-card:hover {
+.exp-role:hover {
   border-left-color: var(--mauve);
   background: var(--mauve-dim);
 }
 
-.exp-header {
+.exp-role-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -189,29 +205,22 @@ section {
 }
 
 .exp-title {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--text);
 }
 
 .exp-date {
-  font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;
   color: var(--overlay0);
   white-space: nowrap;
-}
-
-.exp-company {
-  font-size: 0.82rem;
-  color: var(--mauve);
-  margin-top: 0.15rem;
 }
 
 .exp-desc {
   font-size: 0.84rem;
   color: var(--overlay1);
   line-height: 1.7;
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
 }
 
 .tags {
@@ -222,7 +231,6 @@ section {
 }
 
 .tag {
-  font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;
   color: var(--mauve);
   background: var(--mauve-dim);
@@ -242,7 +250,6 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
   color: var(--mauve);
   margin-top: 1.25rem;
@@ -266,15 +273,16 @@ footer {
   margin-top: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   color: var(--overlay0);
 }
 
 .footer-prompt {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--overlay0);
+}
+
+.footer-prompt .prompt {
   color: var(--green);
 }
 
@@ -313,7 +321,8 @@ footer {
     padding: 4rem 1.5rem 3rem;
   }
 
-  .exp-header {
+  .exp-org-header,
+  .exp-role-header {
     flex-direction: column;
     gap: 0.15rem;
   }
