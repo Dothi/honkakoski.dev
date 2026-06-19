@@ -193,7 +193,7 @@ section:last-child {
 }
 
 .exp-role:hover,
-.exp-role:active {
+.exp-role.active {
   border-left-color: var(--mauve);
   background: var(--mauve-dim);
 }

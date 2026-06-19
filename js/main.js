@@ -13,3 +13,12 @@ reveals.forEach((el, i) => {
   el.style.transitionDelay = `${i * 100}ms`;
   observer.observe(el);
 });
+
+document.querySelectorAll('.exp-role').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.exp-role.active').forEach(c => {
+      if (c !== card) c.classList.remove('active');
+    });
+    card.classList.toggle('active');
+  });
+});
