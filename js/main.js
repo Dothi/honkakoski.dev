@@ -15,10 +15,15 @@ reveals.forEach((el, i) => {
 });
 
 document.querySelectorAll('.exp-role').forEach(card => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+    e.stopPropagation();
     document.querySelectorAll('.exp-role.active').forEach(c => {
       if (c !== card) c.classList.remove('active');
     });
     card.classList.toggle('active');
   });
+});
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.exp-role.active').forEach(c => c.classList.remove('active'));
 });
