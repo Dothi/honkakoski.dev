@@ -123,6 +123,10 @@ section {
   margin-bottom: 4.5rem;
 }
 
+section:last-child {
+  margin-bottom: 0;
+}
+
 .section-heading {
   font-size: 0.72rem;
   font-weight: 500;
@@ -264,7 +268,7 @@ section {
 /* ---- footer ---- */
 
 footer {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 
 /* ---- reveal ---- */
