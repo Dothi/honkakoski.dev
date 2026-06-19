@@ -192,7 +192,8 @@ section:last-child {
   -webkit-tap-highlight-color: transparent;
 }
 
-.exp-role:hover {
+.exp-role:hover,
+.exp-role:active {
   border-left-color: var(--mauve);
   background: var(--mauve-dim);
 }
