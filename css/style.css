@@ -16,7 +16,6 @@
   --subtext1: #bac2de;
   --text: #cdd6f4;
   --mauve: #cba6f7;
-  --green: #a6e3a1;
   --pink: #f5c2e7;
   --mauve-dim: rgba(203, 166, 247, 0.15);
 }
@@ -125,16 +124,12 @@ section {
 }
 
 .section-heading {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  margin-bottom: 2rem;
-}
-
-.section-heading .prompt {
-  color: var(--green);
-  user-select: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--overlay0);
+  margin-bottom: 1.75rem;
 }
 
 /* ---- about ---- */
@@ -269,36 +264,7 @@ section {
 /* ---- footer ---- */
 
 footer {
-  border-top: 1px solid var(--surface0);
-  margin-top: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  font-size: 0.7rem;
-  color: var(--overlay0);
-}
-
-.footer-prompt {
-  font-size: 0.82rem;
-  color: var(--overlay0);
-}
-
-.footer-prompt .prompt {
-  color: var(--green);
-}
-
-.cursor {
-  display: inline-block;
-  width: 7px;
-  height: 13px;
-  background: var(--overlay0);
-  vertical-align: text-bottom;
-  margin-left: 1px;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  padding-bottom: 3rem;
 }
 
 /* ---- reveal ---- */
