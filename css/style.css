@@ -60,7 +60,7 @@ a:focus-visible {
 .container {
   max-width: 640px;
   margin: 0 auto;
-  padding: 6rem 2rem 4rem;
+  padding: 5rem 2rem 0;
 }
 
 /* ---- hero ---- */
@@ -264,7 +264,7 @@ section {
 /* ---- footer ---- */
 
 footer {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 /* ---- reveal ---- */
@@ -284,7 +284,7 @@ footer {
 
 @media (max-width: 480px) {
   .container {
-    padding: 4rem 1.5rem 3rem;
+    padding: 3rem 1.5rem 0;
   }
 
   .exp-org-header,
